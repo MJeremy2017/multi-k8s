@@ -10,7 +10,7 @@ docker push jeremyzhang1/multi-client:$SHA
 docker push jeremyzhang1/multi-server:$SHA
 docker push jeremyzhang1/multi-worker:$SHA
 
-kubclt apply -f k8s
-kubclt set image deployments/server-deployment server=jeremyzhang1/multi-server:$SHA
-kubclt set image deployments/client-deployment client=jeremyzhang1/multi-client:$SHA
-kubclt set image deployments/worker-deployment worker=jeremyzhang1/multi-worker:$SHA
+kubctl apply -f k8s
+kubctl set image deployments/server-deployment server=jeremyzhang1/multi-server:$SHA
+kubctl set image deployments/client-deployment client=jeremyzhang1/multi-client:$SHA
+kubctl set image deployments/worker-deployment worker=jeremyzhang1/multi-worker:$SHA
